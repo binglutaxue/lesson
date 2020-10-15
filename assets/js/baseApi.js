@@ -1,7 +1,7 @@
 const baseUrl = 'http://ajax.frontend.itheima.net';
 $.ajaxPrefilter(function (options) {
     options.url = `${baseUrl}${options.url}`;
-    console.log(options);
+    // console.log(options);
     if (options.url.indexOf('/my/') !== -1) {
         options.headers = {
             Authorization: localStorage.getItem('token') || '',
